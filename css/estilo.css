@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+:root{
+    --color-fondo-form: #2B3134; 
+    --color-boton-submit: hsl(224, 95%, 49%);
+    --color-boton-submit-hover: green;
+    --color-fondo-campos:black;
+    --color-placeholder-campo: rgb(106, 117, 122);
+    --color-labels-form: white;
+    --color-borde-campos: #C2CFD5;
+    --colo: linear-gradient(30deg, white);
+}
+
+h1 {
+    color: rgb(52, 78, 82);
+    text-shadow: 1px 3px 2px rgba(0,0,0,0.2);
+}
+p {
+    color: hsl(150, 19%, 27%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    line-height: 1.8em;
+    background: url(https://cdlnws.a.ssl.fastly.net/image/upload/f_auto,q_auto/v1533058403/blog/College_Student_Studying_in_Coffee_Shop.jpg);
+}
+
+body::after{
+    background-color: blue;
+}
+.campo,
+.selectOpciones,
+.area {
+    display: block;
+}
+
+header{
+    text-align: center;
+    width: 700px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+}
+
+#survey-form {
+    width: 500px;
+    max-width: 90%;
+    background-color: var(--color-fondo-form);
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 3%;
+    padding-left: 3%;
+    font-size: 20px;
+    padding-top: 1.5%;
+    padding-bottom: 2%;
+    color: white;
+    margin-bottom: 50px;
+    border-bottom: 7px solid blue;
+    opacity: .9;
+}
+
+.form-group {
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+.campo,
+.area {
+    position: relative;
+    width: 95%;
+    top: 10px;
+    height: 2em;
+    border-style: none;
+    border: 0.1px solid var(--color-borde-campos);
+    font-size: 18px;
+    background-color: var(--color-fondo-campos);
+    max-width: 100%;
+    padding-left: 18px;
+    color: white;
+}
+input::placeholder{
+    color:  var(--color-placeholder-campo);
+}
+area::placeholder{
+    color:  var(--color-placeholder-area);
+}
+.area{
+    padding-top: 2%;
+    height: 80px;
+}
+
+select{
+    margin-top: 1%;
+    width: 60%;
+    height: 40px;
+    font-size: 18px;
+    background-color: transparent;
+    color: var(--color-borde-campos);
+    padding-right: 12px;
+    padding-left: 11px;
+    background-color: black;
+}
+
+select>option{
+    background-color: black;
+}
+
+@media (max-width: 900px){
+    select{
+        width: 100%;
+    }   
+
+h1 {
+    color: black;
+    text-shadow: 1px 3px 2px rgb(170, 194, 193);
+}
+}
+
+#submit{
+    width: 60%;
+    background-color: var(--color-boton-submit);
+    height: 2.5em;
+    font-family: 'Rubik';
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    border-style: none;
+    cursor: pointer;
+}
+
+#submit:hover{
+    animation-name: sobreElBoton;
+    animation-duration: 600ms;
+    animation-fill-mode: forwards;
+}
+.form-boton{
+    padding-top: 9%;
+    padding-bottom: 8%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+@keyframes sobreElBoton {
+    0% {
+            background-color: var(--color-boton-submit);
+    }
+    100% {
+            background-color: var(--color-boton-submit-hover);
+    }
+}

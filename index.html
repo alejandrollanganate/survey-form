@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form - FreeCodeCamp</title>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">FreeCodeCamp - Formulario de encuesta</h1>
+        <p id="description">Gracias por ayudarnos a mejorar nuestra plataforma a través de tu opnión.</p>
+    </header>
+    <form action="" id="survey-form">
+        <div class="form-group">
+            <label for="name" id="name-label"> Nombre completo: </label>
+            <input id="name" class="campo" type="text" name="ss" placeholder="Ingrese sus nombres y apellidos" required>
+        </div>
+        <div class="form-group">
+            <label for="email" id="email-label"> Email: </label>
+            <input type="email" class="campo" name="email" id="email" placeholder="Ingrese su correo electrónico personal" required>
+        </div>
+        <div class="form-group">
+            <label for="age" id="number-label"> Edad: (opcional) </label>
+            <input type="number" class="campo" name="age" id="number" placeholder="Ingrese su edad actual" min="7" max="80">
+        </div>
+        <div class="form-group selectOpciones">
+            <label for="dropdown" id="dropdown-label"> Ingrese el curso que desearía tomar: </label>
+            <select name="dropdown" id="dropdown" required>
+                <option value="1">Seleccione una opción</option>
+                <option>Python for Data Science</option>
+                <option>Machine Learning</option>
+                <option>Deep Learning</option>
+                <option>Marketing Digital</option>
+                <option>Cybersecurity</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="opciones" id="radio-label"> Ingrese la modalidad de los cursos: </label>
+            <div class="opcionesRadio">
+                <input type="radio" name="opciones" id="opcion1" value="Online" required>
+                <label for="opcion1">Online</label>
+                <input type="radio" name="opciones" id="opcion2" value="Presencial" required>
+                <label for="opcion2">Presencial</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="opcionesMultiples" id="radio-label"> Ingrese el tipo de contenido que le gustaría que esté presente en el curso: </label>
+            <div class="opcionesCheck">
+                <div class="opcionCheck">
+                    <input type="checkbox" name="opcionesMultiples" id="opcionMultiple1" value="Online" required>
+                    <label for="opcionMultiple1">Vídeos</label>
+                </div>
+                <div class="opcionCheck">
+                    <input type="checkbox" name="opcionesMultiples" id="opcionMultiple2" value="Presencial" required>
+                    <label for="opcionMultiple2">Texto informativo</label>
+                </div>
+                <div class="opcionCheck">
+                    <input type="checkbox" name="opcionesMultiples" id="opcionMultiple3" value="Online" required>
+                    <label for="opcionMultiple3">Foros</label>
+                </div>
+                <div class="opcionCheck">
+                    <input type="checkbox" name="opcionesMultiples" id="opcionMultiple4" value="Presencial" required>
+                    <label for="opcionMultiple4">Pruebas</label>
+                </div>
+                <div class="opcionCheck">
+                    <input type="checkbox" name="opcionesMultiples" id="opcionMultiple5" value="Presencial" required>
+                    <label for="opcionMultiple5">Videoconferencias</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="comments">Ingrese su comentario: </label>
+            <textarea name="comentarios" class="area" id="comments" placeholder="Ingresa tus comentarios aquí"></textarea>
+        </div>
+        <div class="form-boton">
+            <input type="submit" value="Enviar" id="submit">
+        </div>
+
+    </form>
+    <script src=" https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js "></script>
+</body>
+
+</html>
